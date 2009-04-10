@@ -1,0 +1,9 @@
+<div class="article">
+  <h1><%= link_to_page(@page) %></h1>
+  <hr/>
+  <div class="date">“<%= @page.created_at.strftime('%Y-%m-%d') %>”</div>
+
+  <div class="body">
+    <%= @content %>
+  </div>
+</div>

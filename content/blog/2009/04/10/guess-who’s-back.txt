@@ -1,0 +1,18 @@
+--- 
+title:      Guess Who’s Back
+created_at: 2009-04-10 19:29:53.984481 +02:00
+blog_post:  true
+filter:
+  - textile
+layout:     post
+--- 
+
+I finally found some time to move some personal web applications to my "slicehost":http://slicehost.com vps, which has only been running "pasternak":http://pasternak.superalloy.nl up till now, what a waste of money. So here comes an end to that situation!
+
+h3. Return of the Mac and web developer
+
+!/images/ReturnoftheMackSingle.jpg!:http://en.wikipedia.org/wiki/Return_of_the_Mack
+
+I’m back online, so step 1 has been taken care of. Now comes step 2, the hard part, keeping it up-to-date. I think I'll be writing some shorter posts and I’d _like_ to say “more often”, but we’ll just have to see about that. Anyways…
+
+Thanks to "Manfred Stienstra":http://manfred.github.com/ who has so kindly offered me to use his layout, because it’s just not my thing. And "Webby":http://webby.rubyforge.org so I can create posts locally, with my favorite text editor, and store revisions in "git":http://github.com/alloy/superalloy.nl; welcome to superalloy.nl version 2 and hope to see you around!
