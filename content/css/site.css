@@ -13,6 +13,7 @@ color:
   highlight:   "#B2CCFF"
   quiet:       "#666"
   alt:         "#666"
+  purple:      "#993399"
 ---
 
 /* Headings
@@ -23,8 +24,8 @@ h1 a { text-decoration: none; }
 
 /* Text Elements
  * --------------------------------------------------------------------- */
-a                 { color: <%= @page.color['link'] %>; }
-a:hover           { color: <%= @page.color['link-hover'] %>; }
+a                 { color: <%= @page.color['header'] %>; }
+a:hover           { color: <%= @page.color['purple'] %>; }
 blockquote        { color: <%= @page.color['blockquote'] %>; }
 
 pre {

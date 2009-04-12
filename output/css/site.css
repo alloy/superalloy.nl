@@ -7,8 +7,8 @@ h1 a { text-decoration: none; }
 
 /* Text Elements
  * --------------------------------------------------------------------- */
-a                 { color: #125AA7; }
-a:hover           { color: #000; }
+a                 { color: #111; }
+a:hover           { color: #993399; }
 blockquote        { color: #666; }
 
 pre {
