@@ -108,4 +108,22 @@ div.article hr {
   margin-top: -27px;
 }
 
+.sidebar {
+  font-size: 14px;
+}
+
+.sidebar a {
+  color: #993399;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #993399;
+  text-decoration: underline;
+}
+
+.sidebar .box {
+  background-color: #F0F0F0;
+}
+
 /* EOF */

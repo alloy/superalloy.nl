@@ -1,15 +1,11 @@
----
-extension: html
-filter:    erb
----
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-   <title>● alloy writes / <%= @page.title %></title>
-   <meta name="author" content="<%= @page.author %>" />
+   <title>● alloy writes / JSTestSan</title>
+   <meta name="author" content="" />
 
    <!--- Blueprint CSS Framework -->
    <link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection">
@@ -33,18 +29,28 @@ filter:    erb
    </div>
 
    <div class="column span-15 prepend-2 first">
-      <%= @content %>
+      <div class="article">
+  <h1><a href="/blog/2009/04/10/js-test-san.html">JSTestSan</a></h1>
+  <hr/>
+  <div class="date">“2009-04-12”</div>
+
+  <div class="body">
+    
+  </div>
+</div>
    </div>
 
    <div class="column span-5 append-2 last sidebar">
       <h4><a href="/articles.html">./articles</a></h4>
       <p>
         <ul>
-          <% articles = @pages.find(:all, :limit => 10, :in_directory => '/', :recursive => true,
-               :sort_by => "created_at", :reverse => true, :blog_post => true)
-             articles.each do |page| %>
-              <li><a href="#"><%= page.title %></a></li>
-          <% end %>
+          
+              <li><a href="#">JSTestSan</a></li>
+          
+              <li><a href="#">Kicker</a></li>
+          
+              <li><a href="#">Guess Who’s Back</a></li>
+          
         </ul>
       </p>
 
