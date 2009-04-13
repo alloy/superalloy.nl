@@ -64,7 +64,7 @@ That should look familiar to people using Ruby’s <code>Test::Unit</code>.
 
 I haven’t added a <code>Rake</code> task helper yet, but the following should get you going for now.
 
-<%# FIXME: This breaks formatting for some reason. coderay :lang => "ruby" do %>
+<%# FIXME: This breaks formatting for some reason. uv :lang => "ruby" do %>
 <pre><code>
 namespace :test do
   desc "Run the JavaScript unit tests in public/test"
