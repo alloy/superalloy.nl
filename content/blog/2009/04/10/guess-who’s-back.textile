@@ -16,4 +16,4 @@ h3. Return of the Mac and web developer
 
 I’m back online, so step 1 has been taken care of. Now comes step 2, the hard part, keeping it up-to-date. I think I'll be writing some shorter posts and I’d _like_ to say “more often”, but we’ll just have to see about that. Anyways…
 
-Thanks to "Manfred Stienstra":http://manfred.github.com/ who has so kindly offered me to use his styling, because it’s just not my thing. And "Webby":http://webby.rubyforge.org so I can create posts locally, with my favorite text editor, and store revisions in "git":http://github.com/alloy/superalloy.nl; welcome to superalloy.nl version 2 and hope to see you around!
+Thanks to "Manfred Stienstra":http://manfred.github.com/ who has so kindly offered me to use his styling to base mine on, because really it’s just not my thing. And "Webby":http://webby.rubyforge.org so I can create posts locally, with my favorite text editor, and store revisions in "git":http://github.com/alloy/superalloy.nl; welcome to superalloy.nl version 2 and hope to see you around!

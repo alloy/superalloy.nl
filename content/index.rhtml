@@ -2,14 +2,13 @@
 title:      stuff
 created_at: 2009-04-10 19:29:53.977280 +02:00
 filter:     erb
-layout:     post
+layout:     default
 dirty:      true
+extension:  html
 ---
-<%
-  articles = @pages.find(:all, :in_directory => @page.dir, :recursive => true,
-      :sort_by => "created_at", :reverse => true, :blog_post => true)
-  articles.delete(@page)
-  paginate(articles, 10) do |page|
--%>
-    <%= link_to_page page %>
-<% end -%>
+<% articles = @pages.find(:all, :in_directory => '/blog', :recursive => true,
+     :sort_by => "created_at", :reverse => true, :blog_post => true) %>
+
+<% articles.each do |page| %>
+  <%= render :partial => '/blog/post', :locals => { :page => page, :content => render(page) } %>
+<% end %>

@@ -1,0 +1,26 @@
+--- 
+title:      Articles
+created_at: 2009-04-13 17:54:53.984481 +02:00
+filter:     erb
+layout:     default
+extension:  html
+---
+
+<div class="body article">
+  <h1>Articles</h1>
+  <hr/>
+  
+  <% months = nil; Dir.chdir('content/blog') { months = Dir.glob("*/*") } %>
+  <% months.reverse.each do |month| %>
+    <div>
+      <h4>./<%= month %></h4>
+      <ul>
+        <% articles = @pages.find(:all, :in_directory => "/blog/#{month}", :recursive => true,
+             :sort_by => "created_at", :reverse => true, :blog_post => true)
+           articles.each do |page| %>
+            <li><%= link_to_page(page) %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>

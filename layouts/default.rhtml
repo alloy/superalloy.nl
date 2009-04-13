@@ -9,7 +9,6 @@ filter:    erb
 <head>
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
    <title>● alloy writes / <%= @page.title %></title>
-   <meta name="author" content="<%= @page.author %>" />
 
    <!--- Blueprint CSS Framework -->
    <link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection">
@@ -37,16 +36,18 @@ filter:    erb
    </div>
 
    <div class="column span-5 append-2 last sidebar">
-      <h4><a href="/articles.html">./articles</a></h4>
-      <p>
-        <ul>
-          <% articles = @pages.find(:all, :limit => 10, :in_directory => '/', :recursive => true,
-               :sort_by => "created_at", :reverse => true, :blog_post => true)
-             articles.each do |page| %>
-              <li><a href="#"><%= page.title %></a></li>
-          <% end %>
-        </ul>
-      </p>
+      <div class="box">
+        <h4><a href="/blog/articles.html">./blog/articles</a></h4>
+        <p>
+          <ul>
+            <% articles = @pages.find(:all, :limit => 10, :in_directory => '/', :recursive => true,
+                 :sort_by => "created_at", :reverse => true, :blog_post => true)
+               articles.each do |page| %>
+                <li><a href="#"><%= page.title %></a></li>
+            <% end %>
+          </ul>
+        </p>
+      </div>
 
       <div class="box">
         <h4>Links</h4>
@@ -70,17 +71,14 @@ filter:    erb
           <a href="http://macruby.com">MacRuby</a>, and
           <a href="http://rubyonrails.org">Rails</a>.
         </p>
-        <p class="quiet">Contact me at: <code>me@&lt;this domain&gt;</code>.</p>
+        <p class="quiet">Contact me at: <code>me@&lt;this domain&gt;</code></p>
         <p class="quiet">Or follow me on <a href="http://twitter.com/alloy">twitter</a>, I promise I’ll be very quiet ;-)</p>
       </div>
-
-      <h5>Incremental leading</h5>
-      <p class="incr">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras ornare mattis nunc. Mauris venenatis, pede sed aliquet vehicula, lectus tellus pulvinar neque, non cursus sem nisi vel augue. sed aliquet vehicula, lectus tellus.</p>
    </div>
 
    <div class="column span-20 prepend-2 append-2 first last" id="footer">
      <hr />
-     <p>This website was created with <a href="http://webby.rubyforge.org">Webby</a></p>
+     <p class="quiet left">This website was created with <a href="http://webby.rubyforge.org">Webby</a></p>
    </div>
 
 </div>

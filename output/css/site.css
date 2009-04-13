@@ -109,4 +109,12 @@ div.article hr {
   background-color: #F0F0F0;
 }
 
+#footer p {
+  font-size: 12px;
+}
+
+#footer a {
+  text-decoration: none;
+}
+
 /* EOF */
