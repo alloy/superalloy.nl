@@ -13,7 +13,7 @@ h4. Why?
 
 Not so long ago I had to work on some text formatted as Textile. For this task I had to go back and forth to my text editor and terminal to edit and render the text as HTML. This started to get tedious pretty fast, so being the Ruby _and_ Cocoa head that I am, I quickly whipped up a simple, purpose agnostic, command-line tool which uses the FSEvents API (OS X) to watch for file changes.
 
-_I just love how easy it is to write "small" tools with Ruby and Cocoa that do seemingly "big" things. For another example see "the next blog post":/blog/2009/04/13/js-test-san.html._
+_I just love how easy it is to write "small" tools with Ruby and Cocoa that do seemingly "big" things. For another example see "the next blog post":/2009/04/13/js-test-san.html._
 
 h3. Install
 

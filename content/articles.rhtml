@@ -10,12 +10,12 @@ extension:  html
   <h1>Articles</h1>
   <hr/>
   
-  <% months = nil; Dir.chdir('content/blog') { months = Dir.glob("*/*") } %>
+  <% months = nil; Dir.chdir('content') { months = Dir.glob("{2009}/*") } %>
   <% months.reverse.each do |month| %>
     <div>
       <h4>./<%= month %></h4>
       <ul>
-        <% articles = @pages.find(:all, :in_directory => "/blog/#{month}", :recursive => true,
+        <% articles = @pages.find(:all, :in_directory => "/#{month}", :recursive => true,
              :sort_by => "created_at", :reverse => true, :blog_post => true)
            articles.each do |page| %>
             <li><%= link_to_page(page) %></li>

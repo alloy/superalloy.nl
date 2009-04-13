@@ -37,7 +37,7 @@ filter:    erb
 
    <div class="column span-6 append-2 last sidebar">
       <div class="box">
-        <h4>./blog/articles/recent</h4>
+        <h4>./articles/recent</h4>
         <p>
           <ul>
             <% articles = @pages.find(:all, :limit => 5, :in_directory => '/', :recursive => true,
@@ -47,7 +47,7 @@ filter:    erb
                 <li><%= link_to_page page %></li>
             <% end %>
           </ul>
-          <a href="/blog/articles.html">All articles…</a>
+          <a href="/articles.html">All articles…</a>
         </p>
       </div>
 

@@ -6,9 +6,9 @@ layout:     default
 dirty:      true
 extension:  html
 ---
-<% articles = @pages.find(:all, :in_directory => '/blog', :recursive => true,
+<% articles = @pages.find(:all, :in_directory => '/', :recursive => true,
      :sort_by => "created_at", :reverse => true, :blog_post => true) %>
 
 <% articles.each do |page| %>
-  <%= render :partial => '/blog/post', :locals => { :page => page, :content => render(page) } %>
+  <%= render :partial => '/post', :locals => { :page => page, :content => render(page) } %>
 <% end %>
