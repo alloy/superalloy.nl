@@ -1,0 +1,38 @@
+--- 
+title:      Kicker kicks for kicks
+created_at: 2009-04-12 17:29:53.984481 +02:00
+blog_post:  true
+filter:     textile
+layout:     post
+extension:  html
+---
+
+A OS X command line tool to execute commands when a file, or file in a directory, is updated.
+
+h4. Why?
+
+At the office we have long had the idea of rewriting autotest to be simpler to work with. Customizing the way autotest works can be done, but in short; it can be a bit hard sometimes when you just wanna get started.
+
+Then not so long ago I had to work on some text formatted as Textile and had to go back to my terminal to render it as HTML after each edit. This started to get tedious, and being the Ruby _and_ Cocoa head that I am, I quickly whipped up a simple purpose agnostic cli tool which uses the OS X FSEvents API to watch for file changes.
+
+_I just love how easy it is to write "small" tools with Ruby and Cocoa that do seemingly "big" things. But more on that in the next blog post._
+
+h3. Install
+
+After some weeks of usage, and finally implementing the ability to watch multiple paths, I can now say it’s definitely usable. Get it:
+
+<code>$ sudo gem install alloy-kicker -s http://gems.github.com</code>
+
+Now go kick some stuff!
+
+_If you want to checkout the source you can do so on "GitHub":http://github.com/alloy/kicker/tree/master._
+
+h4. Example
+
+For instance, say you’d like to run a Ruby test case every time either the library file, or the test case file is saved. With kicker this would work like this:
+
+<code>$ kicker -e "ruby test/unit/article_test.rb" **/article*.rb</code>
+
+From now on whenever you save any file which matches the glob expression the test case will be ran.
+
+So know you know. Go wild!

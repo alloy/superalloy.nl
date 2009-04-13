@@ -97,6 +97,15 @@ body {
   color: #993399;
 }
 
+.body code {
+  font-size: 14px;
+  color: black;
+  background-color: #F0F0F0;
+  padding: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
 div.article div.date {
   color: #C0C0C0;
   margin-top: -27px;
