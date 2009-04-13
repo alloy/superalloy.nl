@@ -8,7 +8,9 @@ layout:     post
 extension:  html
 --- 
 
-I finally found some time to move some personal web applications to my "slicehost":http://slicehost.com vps, which has only been running "pasternak":http://pasternak.superalloy.nl up till now, what a waste of money. So here comes an end to that situation!
+I finally found some time to move some personal web applications to my "slicehost":http://slicehost.com vps, which has only been running "pasternak":http://pasternak.superalloy.nl up till now… What a waste of money.
+
+So here comes an end to that situation!
 
 h3. Return of the Mac and web developer
 

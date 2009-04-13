@@ -43,7 +43,8 @@ filter:    erb
             <% articles = @pages.find(:all, :limit => 5, :in_directory => '/', :recursive => true,
                  :sort_by => "created_at", :reverse => true, :blog_post => true)
                articles.each do |page| %>
-                <li><a href="#"><%= page.title %></a></li>
+                
+                <li><%= link_to_page page %></li>
             <% end %>
           </ul>
           <a href="/blog/articles.html">All articles…</a>
