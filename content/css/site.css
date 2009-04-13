@@ -124,6 +124,11 @@ div.article hr {
 
 .sidebar .box {
   background-color: #F0F0F0;
+  padding: 15px;
+}
+
+#about {
+  font-size: 12px;
 }
 
 #footer p {
