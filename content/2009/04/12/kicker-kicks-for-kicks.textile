@@ -9,6 +9,10 @@ extension:  html
 
 A OS X command line tool which executes commands when a file, or a file in a directory, is modified.
 
+!/images/kikker.jpg!
+
+_Thanks to "Manfred Stienstra":http://manfred.github.com for the project’s mascotte image. Kikker means “frog” in Dutch._
+
 h4. Why?
 
 Not so long ago I had to work on some text formatted as Textile. For this task I had to go back and forth to my text editor and terminal to edit and render the text as HTML. This started to get tedious pretty fast, so being the Ruby _and_ Cocoa head that I am, I quickly whipped up a simple, purpose agnostic, command-line tool which uses the FSEvents API (OS X) to watch for file changes.

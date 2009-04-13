@@ -11,10 +11,6 @@ extension:  html
 
 A OS X command line tool to run JavaScript (Prototype) unit tests from the comfort of your terminal.
 
-!/images/kikker.jpg!
-
-_Thanks to Manfred Stienstra for the project’s mascotte image. Kikker means “frog” in Dutch._
-
 h3. Why?
 
 Recently I came across "an article on testing JavaScript outside the Browser":http://tenderlovemaking.com/2009/04/05/testing-javascript-outside-the-browser/, which talks about running tests written in Ruby against your JS libraries.
