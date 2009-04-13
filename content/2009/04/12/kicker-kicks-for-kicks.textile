@@ -37,4 +37,6 @@ Say you’d like to run a Ruby test case every time either the library file, or 
 
 From now on whenever you save any file which matches the glob expression, the test case will be ran.
 
+There’s also support for Growl notifications and click callback handlers. See the "README":http://github.com/alloy/kicker/blob/master/README.rdoc for more info.
+
 So know you know. Go wild!
