@@ -1,0 +1,91 @@
+--- 
+title:      JSTestSan
+created_at: 2009-04-13 17:45:53.984481 +02:00
+blog_post:  true
+filter:
+  - erb
+  - textile
+layout:     post
+extension:  html
+---
+
+A OS X command line tool to run JavaScript (Prototype) unit tests from the comfort of your terminal.
+
+!/images/kikker.jpg!
+
+_Thanks to Manfred Stienstra for the project’s mascotte image. Kikker means “frog” in Dutch._
+
+h3. Why?
+
+Recently I came across "an article on testing JavaScript outside the Browser":http://tenderlovemaking.com/2009/04/05/testing-javascript-outside-the-browser/, which talks about running tests written in Ruby against your JS libraries.
+
+At the office we loved the idea of being able to run our JS unit tests together with all other (Rails) tests. However, not in the way the aforementioned article suggests.
+
+Now I know the title of the article explicitly says “outside the Browser”, but running outside of a real browser seems a bit pointless to me. I’d rather run them inside an actual browser, as we are currently doing by hand on Safari. And also write them in a format that would allow us to run them by hand on _any_ browser, ie HTML/JavaScript.
+
+Since we’re all on Macs, my Cocoa flags where quickly raised. Especially on the use of "WebKit":http://webkit.org, which, as you might know, powers Safari.
+
+I fired up my favorite text editor and wrote a prototype. Happy with the results I decided to re-write it for real this weekend. _Also because I needed something noteworthy to write about on this new blog ;-)_
+
+h4. Install
+
+The source is available as either a Ruby gem, or directly from "GitHub":http://github.com/alloy/js-test-san/tree/master. To install the gem:
+
+<pre><code>$ sudo gem install alloy-js-test-san -s http://gems.github.com</code></pre>
+
+h3. Usage
+
+JSTestSan comes with a command-line tool, called <code>jstest</code>, which you can feed HTML files that run Prototype unittest.js test cases.
+
+For instance, let’s run the Prototype test suite which comes bundled with the JSTestSan source code (updated slightly):
+
+<pre><code>
+$ jstest test/regression/prototype/unit/*_test.html
+....................................................................
+....................................................................
+..F.................................................................
+....................................................................
+....................................................................
+................
+
+  1) Failed:
+testViewportDimensions (Unit test file | Dom | default template | 2009-04-11 15:28) [test/regression/prototype/unit/dom_test.html]:
+Failure: NOTE: YOU MUST ALLOW JAVASCRIPT TO RESIZE YOUR WINDOW FOR THIS TEST TO PASS
+expected: <50>, actual: <0>
+Failure: NOTE: YOU MUST ALLOW JAVASCRIPT TO RESIZE YOUR WINDOW FOR THIS TEST TO PASS
+expected: <50>, actual: <0>
+
+Finished in 18.127608 seconds.
+
+356 tests, 2246 assertions, 2 failures, 0 errors
+</code></pre>
+
+That should look familiar to people using Ruby’s <code>Test::Unit</code>.
+
+I haven’t added a <code>Rake</code> task helper yet, but the following should get you going for now.
+
+<%# FIXME: This breaks formatting for some reason. coderay :lang => "ruby" do %>
+<pre><code>
+namespace :test do
+  desc "Run the JavaScript unit tests in public/test"
+  task :javascript do
+    puts "Running JavaScript tests:"
+    sh "jstest #{Dir['public/test/*.html'].join(' ')}"
+  end
+end
+
+task :test do
+  Rake::Task['test:javascript'].invoke
+end
+</code></pre>
+<%# end %>
+
+Note that the last task does not override the <code>test</code> task that comes with Rails, rather Rake will append the block to the blocks of the existing <code>test</code> task. So when the original task finishes your JS tests will be ran.
+
+h3. Conclusion
+
+I’m pretty happy with the current results. But as you can tell, from the output of running Prototype’s test suite, there’s still a problem, and I’m sure there are more like it.
+
+In this case the problem is that there’s _no_ actual window object (<code>NSWindow</code>) associated with the <code>WebView</code> instance, which is why the poor bugger can’t adjust its dimensions. _People shouldn’t be resizing the users windows anyways, so I don't worry about this problem too much ;-)_
+
+As stated earlier, JSTestSan currently only works with Prototype’s unittest.js, because that’s the combination we are currently using at the office. However, it should be easy enough to add support for other test frameworks. Let me know if you do so.

@@ -2,8 +2,8 @@
   padding: 0.5em;
   margin-bottom: 1.3em;
   background-color: #eee;
-  border: 1px solid #aaa;
-  font: 1.1em Monaco, 'Courier New', 'Terminal', monospace;
+  border: 1px solid #ddd;
+  font: 15px Monaco, 'Courier New', 'Terminal', monospace;
   color: #100;
 }
 .CodeRay pre {
