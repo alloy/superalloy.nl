@@ -1,5 +1,5 @@
 --- 
-title:      JSTestSan
+title:      JSTestSan (Updated!)
 created_at: 2009-04-13 17:45:53.984481 +02:00
 blog_post:  true
 filter:
@@ -8,6 +8,8 @@ filter:
 layout:     post
 extension:  html
 ---
+
+*Note that the name and locations of this project have changed. The new name and locations in this article have been updated to reflect this. See the "Headless Squirrel article":/2009/04/14/headless-squirrel.html for more info.*
 
 A OS X command line tool to run JavaScript (Prototype) unit tests from the comfort of your terminal.
 
@@ -25,24 +27,23 @@ I fired up my favorite text editor and wrote a prototype. Happy with the results
 
 h4. Install
 
-The source is available as either a Ruby gem, or directly from "GitHub":http://github.com/alloy/js-test-san/tree/master. To install the gem:
+The source is available as either a Ruby gem, or directly from "GitHub":http://github.com/Fingertips/headless-squirrel/tree/master. To install the gem:
 
-<pre><code>$ sudo gem install alloy-js-test-san -s http://gems.github.com</code></pre>
+<pre><code>$ sudo gem install Fingertips-headless-squirrel -s http://gems.github.com</code></pre>
 
 h3. Usage
 
-JSTestSan comes with a command-line tool, called <code>jstest</code>, which you can feed HTML files that run Prototype unittest.js test cases.
+Headless Squirrel comes with a command-line tool, called <code>jstest</code>, which you can feed HTML files that run Prototype unittest.js test cases.
 
-For instance, let’s run the Prototype test suite which comes bundled with the JSTestSan source code (updated slightly):
+For instance, let’s run the Prototype test suite which comes bundled with the Headless Squirrel source code (updated slightly):
 
-<pre><code>
-$ jstest test/regression/prototype/unit/*_test.html
-....................................................................
-....................................................................
-..F.................................................................
-....................................................................
-....................................................................
-................
+<pre><code>$ jstest test/regression/prototype/unit/*_test.html
+...................................................................
+...................................................................
+....F..............................................................
+...................................................................
+...................................................................
+.....................
 
   1) Failed:
 testViewportDimensions (Unit test file | Dom | default template | 2009-04-11 15:28) [test/regression/prototype/unit/dom_test.html]:
@@ -84,4 +85,4 @@ I’m pretty happy with the current results. But as you can tell, from the outpu
 
 In this case the problem is that there’s _no_ actual window object (<code>NSWindow</code>) associated with the <code>WebView</code> instance, which is why the poor bugger can’t adjust its dimensions. _People shouldn’t be resizing the users windows anyways, so I don't worry about this problem too much ;-)_
 
-As stated earlier, JSTestSan currently only works with Prototype’s unittest.js, because that’s the combination we are currently using at the office. However, it should be easy enough to add support for other test frameworks. Let me know if you do so.
+As stated earlier, Headless Squirrel currently only works with Prototype’s unittest.js, because that’s the combination we are currently using at the office. However, it should be easy enough to add support for other test frameworks. Let me know if you do so.

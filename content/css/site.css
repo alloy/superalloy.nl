@@ -31,6 +31,8 @@ blockquote        { color: <%= @page.color['blockquote'] %>; }
 pre {
   background: <%= @page.color['box-bg'] %>;
   border:     1px solid <%= @page.color['border'] %>;
+  padding:    10px;
+  overflow:   auto;
 }
 
 hr { color: #000; }
